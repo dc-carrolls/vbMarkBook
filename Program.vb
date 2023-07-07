@@ -101,13 +101,13 @@ Module Program
     sub editRecords(names() as string,marks() as decimal)
         console.write("Enter record number:")
         dim record = cint(console.readline())
-        console.Write("Enter student name: ")
+        console.Write("Enter student name:")
         names(record-1) = console.readline()
         marks(record-1) = inputMark("Enter student mark:")
     end sub  
 
     function inputMark(prompt as string) as decimal
-        dim mark = -1
+        dim mark = -1.0
         dim valid = False
         do 
             console.write(prompt)
